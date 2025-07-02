@@ -4,6 +4,8 @@ services:
     ports:
       - "${PORT:-3000}:3000"
     env_file: .env.app
+    volumes:
+      - ./app:/app
     networks:
       - app-network
 
